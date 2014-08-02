@@ -1,0 +1,17 @@
+<h1>Listing monsters</h1>
+<br>
+
+    <% @monsters.each do |monster| %>
+    <div class="box">
+
+     <%= link_to(image_tag("/assets/" + oneline_tag(monster) + ".jpg", :alt => monster.name, :title => "Click for details"), monster) %>
+      <br/>
+      <h3><%= monster.name %></h3>
+      <%= link_to 'Edit', edit_monster_path(monster) %><br/>
+      <%= link_to 'Delete', monster, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Monster', new_monster_path, :class => "action" %>

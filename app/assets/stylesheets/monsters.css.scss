@@ -1,0 +1,45 @@
+// Place all the styles related to the Monsters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ $myorange: #f9af45;
+
+.box {
+	width:200px;
+	display:inline-block;
+	margin:5px;
+	background:#333;
+	color:#ffffff;
+	border-radius:4px;
+	text-align:center;
+
+h3 {
+	margin:5px 0;
+	color:#ffffff;
+}
+
+a, a:visited {
+	color: $myorange;
+}
+
+img {
+	width: 100%;
+}
+
+img:hover {
+	opacity:0.9;
+}
+
+}
+
+a.action {
+	background: $myorange;
+color: #333;
+padding: 5px 14px;
+font-weight: bold;
+border: 1px #333 solid;
+border-radius: 15px;
+margin: 5px;
+display: inline-block;
+font-weight: bold;
+text-decoration: none;
+}

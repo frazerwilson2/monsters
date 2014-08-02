@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<img src="/assets/<%= @monster.name.to_s.downcase.delete(' ') %>.jpg" /><br/>
+<p>
+  <strong>Name:</strong>
+  <%= @monster.name %>
+</p>
+<p>
+<em>
+  <%= @monster.bio %>
+</em>
+</p>
+
+<%= link_to 'Edit', edit_monster_path(@monster), :class => "action" %> |
+<%= link_to 'Back', monsters_path, :class => "action" %>
