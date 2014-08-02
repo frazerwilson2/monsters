@@ -1,6 +1,7 @@
 Monsters::Application.routes.draw do
   get "users/new"
   resources :monsters
+  resources :users
 
   root  'static_pages#home'
   match '/monstersList',  to: 'static_pages#monsters',  via: 'get'
