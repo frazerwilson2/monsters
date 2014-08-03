@@ -1,5 +1,19 @@
 <nav>
 <%= link_to "Home", root_path %>
 <%= link_to "Monsters", monsters_path %>
-<%= link_to "Start", users_new_path %>
+<%= link_to "Users", users_path %>
+</nav>
+
+<nav>
+        <ul class="nav pull-right">
+          <% if signed_in? %>
+              <ul>
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+              </ul>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+            <%= link_to "Signup", users_new_path %>
+          <% end %>
+        </ul>
 </nav>
