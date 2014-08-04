@@ -1,7 +1,9 @@
 <nav>
 <%= link_to "Home", root_path %>
+<% if signed_in? %>
 <%= link_to "Monsters", monsters_path %>
 <%= link_to "Users", users_path %>
+<% end %>
 </nav>
 
 <nav>

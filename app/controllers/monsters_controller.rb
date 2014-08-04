@@ -1,5 +1,6 @@
 class MonstersController < ApplicationController
   before_action :set_monster, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
 
   # GET /monsters
   # GET /monsters.json
@@ -71,5 +72,9 @@ class MonstersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
       params.require(:monster).permit(:name, :bio)
+    end
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
 end
