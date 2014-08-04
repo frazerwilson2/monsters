@@ -7,11 +7,14 @@
      <%= link_to(image_tag("/assets/" + oneline_tag(monster) + ".jpg", :alt => monster.name, :title => "Click for details"), monster) %>
       <br/>
       <h3><%= monster.name %></h3>
+      <% if @admin.admin? %>
       <%= link_to 'Edit', edit_monster_path(monster) %><br/>
       <%= link_to 'Delete', monster, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
     </div>
     <% end %>
 
 <br>
-
+<% if @admin.admin? %>
 <%= link_to 'New Monster', new_monster_path, :class => "action" %>
+<% end %>

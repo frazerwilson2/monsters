@@ -5,6 +5,7 @@ class MonstersController < ApplicationController
   # GET /monsters.json
   def index
     @monsters = Monster.all
+    @admin = current_user
   end
 
   # GET /monsters/1

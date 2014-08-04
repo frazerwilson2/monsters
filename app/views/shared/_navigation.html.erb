@@ -9,6 +9,7 @@
           <% if signed_in? %>
               <ul>
                 <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Edit detail", edit_user_path(current_user) %></li>
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
               </ul>
           <% else %>
