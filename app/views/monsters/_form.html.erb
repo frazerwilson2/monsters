@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :bio %><br>
+  <div class="formRow">
+    <%= f.label :name %>
+    <%= f.text_field :name %><br/>
+  
+    <%= f.label :bio %>
     <%= f.text_field :bio %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to 'Back', monsters_path, :class => "action" %>
+    <%= f.submit "Save changes", class: "action" %>
   </div>
 <% end %>

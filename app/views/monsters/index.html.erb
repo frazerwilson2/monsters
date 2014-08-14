@@ -1,9 +1,10 @@
 <h1>Listing monsters</h1>
 <br>
 
-    <% @monsters.each do |monster| %>
-    <div class="box">
+<h1><%= @admin.name %></h1>
 
+<% @monsters.each do |monster| %>
+  <div class="box">
      <%= link_to(image_tag("/assets/" + oneline_tag(monster) + ".jpg", :alt => monster.name, :title => "Click for details"), monster) %>
       <br/>
       <h3><%= monster.name %></h3>
@@ -15,6 +16,8 @@
     <% end %>
 
 <br>
+<div style="clear:both;">
 <% if @admin.admin? %>
 <%= link_to 'New Monster', new_monster_path, :class => "action" %>
 <% end %>
+</div>

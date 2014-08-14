@@ -5,10 +5,12 @@
   <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
+<div class="formRow">
       <%= f.label :name %>
       <%= f.text_field :name %>
-
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+<br/>
+      <%= f.submit "Sign in", class: "action" %>
+</div>
     <% end %>
 
     <p>New user? <%= link_to "Signup", users_new_path %></p>

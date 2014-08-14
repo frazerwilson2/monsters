@@ -5,10 +5,11 @@
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
 
+<div class="formRow">
       <%= f.label :name %>
       <%= f.text_field :name %>
-
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+</div><br/>
+      <%= f.submit "Let's go!", class: "action" %>
     <% end %>
   </div>
 </div>

@@ -1,22 +1,19 @@
-<nav>
-<%= link_to "Home", root_path %>
+<nav class="mainMenu">
+<ul>
+<li><%= link_to "Mstrs", root_path %></li>
 <% if signed_in? %>
-<%= link_to "Monsters", monsters_path %>
-<%= link_to "Users", users_path %>
+<li><%= link_to "Cards", monsters_path %></li>
+<li><%= link_to "Users", users_path %></li>
 <% end %>
-</nav>
-
-<nav>
-        <ul class="nav pull-right">
+</ul>
+        <ul>
           <% if signed_in? %>
-              <ul>
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Edit detail", edit_user_path(current_user) %></li>
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
-            <%= link_to "Signup", users_new_path %>
+            <li><%= link_to "Signup", users_new_path %></li>
           <% end %>
         </ul>
 </nav>

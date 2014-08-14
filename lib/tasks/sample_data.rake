@@ -20,9 +20,20 @@ def add_others
 end
 
 def add_monsters
-  monkey = Monster.create!(name: "A sort of Monkey Thing", bio: "a bit like King Kong")
-  lizard = Monster.create!(name: "Lizard Thing", bio: "A Godzilla type")
-  rabbit = Monster.create!(name: "RABBITFACE", bio: "Unknown")
-  slimy = Monster.create!(name: "Slimy", bio: "It's all slimy")
-  legs = Monster.create!(name: "Big Legs", bio: "Those some fuckin big legs..")
+  armadillo = Monster.create!(name: "Armadillo", bio: "like a shell thing")
+  bird = Monster.create!(name: "Bird", bio: "a pecker")
+  butterfly = Monster.create!(name: "Butterfly", bio: "with wings")
+  cheetah = Monster.create!(name: "Cheetah", bio: "it cheats")
+  crab = Monster.create!(name: "Crab", bio: "ew, a crab")
+  crocodile = Monster.create!(name: "Crocodile", bio: "sneaky")
+  deer = Monster.create!(name: "Deer", bio: "a runner")
+  goldfish = Monster.create!(name: "Goldfish", bio: "wet")
+  kangaroo = Monster.create!(name: "Kangaroo", bio: "good meat")
+  lizard = Monster.create!(name: "Lizard", bio: "slimy")
+  ocelot = Monster.create!(name: "Ocelot", bio: "howlin!")
+  pig = Monster.create!(name: "Pig", bio: "smelly")
+  rabbit = Monster.create!(name: "Rabbit", bio: "lucky")
+  snake = Monster.create!(name: "Snake", bio: "wiggly")
+  wildcat = Monster.create!(name: "Wild Cat", bio: "gross")
+
 end

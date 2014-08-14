@@ -1,6 +1,12 @@
 class User < ActiveRecord::Base
+  has_many :relationships
+  has_many :monsters, through: :relationships
 	before_create :create_remember_token
 	validates :name, presence: true, uniqueness: true
+
+  def capture!(monster)
+    relationships.create!(monster_id: monster.id)
+  end
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

@@ -1,0 +1,9 @@
+
+<%= User.first.relationships.first.monster_id %>
+
+<table>
+<tr><th>User</th><th>Monster</th></tr>
+<% @relationships.each do |list| %>
+<tr><td><%= list.user_id %></td><td><%= list.monster_id %></td></tr>
+<% end %>
+</table>

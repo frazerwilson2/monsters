@@ -3,12 +3,13 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
-      Setup an email address<br/>
-
+      <p>Setup an email address</p>
+<div class="formRow">
        <%= f.label :email %> 
        <%= f.text_field :email %>
-
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+</div>
+<br/>
+      <%= f.submit "Save changes", class: "action" %>
     <% end %>
 
   </div>

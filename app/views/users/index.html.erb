@@ -2,12 +2,12 @@
 <br>
 
     <% @users.each do |user| %>
-    <div>
-      <p><%= user.name %></p>
-      <p><% if current_user.admin? && !current_user?(user) %>
+    <div class="userDiv">
+      <span><strong><%= user.name %></strong></span>
+      <span><% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
-  	<% end %></p>
+  	<% end %></span>
     </div>
     <% end %>
 

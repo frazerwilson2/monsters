@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @monsterlist = @user.relationships.all
+    @monsters = Monster.all
   end
 
   def edit
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 private
 
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :relationships)
     end
 
     def signed_in_user

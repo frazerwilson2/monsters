@@ -2,44 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
  $myorange: #f9af45;
+ $dullGrey: #666;
 
 .box {
-	width:200px;
+	width:100px;
+	min-height:150px;
 	display:inline-block;
+	float:left;
 	margin:5px;
-	background:#333;
+	padding:8px;
+	background:#000;
 	color:#ffffff;
 	border-radius:4px;
+	overflow:hidden;
 	text-align:center;
 
 h3 {
 	margin:5px 0;
-	color:#ffffff;
+	color:$dullGrey;
+	font-size:10px;
 }
 
 a, a:visited {
 	color: $myorange;
+	font-size:10px;
 }
 
 img {
 	width: 100%;
+	opacity:0.5;
 }
 
 img:hover {
-	opacity:0.9;
+	opacity:1;
 }
 
 }
 
-a.action {
-	background: $myorange;
-color: #333;
-padding: 5px 14px;
-font-weight: bold;
-border: 1px #333 solid;
-border-radius: 15px;
-margin: 5px;
-display: inline-block;
-font-weight: bold;
-text-decoration: none;
-}

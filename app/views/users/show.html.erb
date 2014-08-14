@@ -1,1 +1,10 @@
 <h1><%= @user.name %></h1>
+
+<% @monsterlist.each do |m| %>
+<div class="box">
+<%= link_to(image_tag("/assets/" + oneline_tag(Monster.find(m.monster_id)) + ".jpg", :title => "Click for details")) %>
+<h3><%=	Monster.find(m.monster_id).name %> </h3>
+</div>
+<% end %>
+
+

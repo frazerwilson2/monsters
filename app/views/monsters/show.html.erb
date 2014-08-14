@@ -11,5 +11,10 @@
 </em>
 </p>
 
-<%= link_to 'Edit', edit_monster_path(@monster), :class => "action" %> |
+<%= form_for(current_user.relationships.build(monster_id: @monster.id)) do |f| %>
+  <div><%= f.hidden_field :monster_id %></div>
+  <%= f.submit "capture", class: "btn btn-large btn-primary" %>
+<% end %>
+
+<%= link_to 'Edit', edit_monster_path(@monster), :class => "action" %>
 <%= link_to 'Back', monsters_path, :class => "action" %>
