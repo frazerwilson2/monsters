@@ -35,5 +35,4 @@ def add_monsters
   rabbit = Monster.create!(name: "Rabbit", bio: "lucky")
   snake = Monster.create!(name: "Snake", bio: "wiggly")
   wildcat = Monster.create!(name: "Wild Cat", bio: "gross")
-
 end
