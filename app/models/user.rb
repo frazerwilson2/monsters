@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   has_many :relationships
   has_many :monsters, through: :relationships
 	before_create :create_remember_token
